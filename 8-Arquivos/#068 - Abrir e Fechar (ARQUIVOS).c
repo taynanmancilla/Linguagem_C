@@ -2,16 +2,17 @@
 #include <stdlib.h>
 
 int main(){
-    /*'fopen()': FUNÇÃO PARA ABRIR O ARQUIVO EM MODO DE LEITURA OU ESCRITA*/
+    ///Exemplo:
+    //PONTEIRO DO TIPO FILE
+    FILE *f; //ponteiro para arquivo
+
+    /*'fopen()': FUNCAO PARA ABRIR O ARQUIVO EM MODO DE LEITURA OU ESCRITA*/
     ///Forma geral:
     FILE *fopen(char *nome, char *modo)
 
-    ///Exemplo:
-    FILE *f; //ponteiro para arquivo
-
     f = fopen("arquivo.txt", "w"); //VARIAVEL RECEBE ARQUIVO EM MODO DE ESCRITA(w)
 
-    //FUNÇÃO 'fopen()' RETORNA NULL CASO DÊ ERRO PARA ABRIR UM ARQUIVO
+    //FUNCAO 'fopen()' RETORNA NULL CASO DE ERRO PARA ABRIR UM ARQUIVO
     if (f == NULL){ //SEMPRE VERIFICAR ABERTURA DO ARQUIVO
         printf("Erro na abertura!\n");
         exit(1);//ABORTA O PROGRAMA
@@ -21,7 +22,7 @@ return 0;
 }
 
 int main(){
-    /*MODO DE ABERTURA DETERMINA QUE TIPO DE USO SERÁ FEITO DO ARQUIVO*/
+    /*MODO DE ABERTURA DETERMINA QUE TIPO DE USO SERA FEITO DO ARQUIVO*/
     FILE *f
     //LEITURA DE ARQUIVO TEXTO
     f = fopen("arquivo.txt", "r");
@@ -29,17 +30,17 @@ int main(){
     //ESCRITA DE ARQUIVO TEXTO
     f = fopen("arquivo.txt", "w");
 
-    //LEIRUTA DE ARQUIVO BINÁRIO
+    //LEIRUTA DE ARQUIVO BINARIO
     f = fopen("arquivo.txt", "rb");
 
-    //ESCRITA DE ARQUIVO BINÁRIO
+    //ESCRITA DE ARQUIVO BINARIO
     f = fopen("arquivo.txt", "wb");
 
 return 0;
 }
 
 int main(){
-    /*'fclose': FUNÇÃO PARA FECHAR O ARQUIVO (SEMPRE USAR)*/
+    /*'fclose': FUNCAO PARA FECHAR O ARQUIVO (SEMPRE USAR)*/
     ///Forma Geral:
     int fclose(FILE *f);
 
